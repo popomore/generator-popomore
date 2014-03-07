@@ -1,0 +1,25 @@
+{
+  "name": "<%= props.name %>",
+  "version": "0.1.0",
+  "description": "<%= props.description %>",
+  "main": "index",
+  "dependencies": {<% if (props.hasBin) { %>
+    "commander": "~2.1.0"
+  <% } %>},
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "should": "~3.1.3",
+    "coveralls": "~2.8.0",
+    "istanbul": "~0.2.6"
+  },<% if (repoUrl) { %>
+  "repository": {
+    "type": "git",
+    "url": "<%= repoUrl %>"
+  },<% } %><% if (homepage) { %>
+  "homepage": "<%= homepage %>",<% } %>
+  "author": "<%= props.user %> <<%= props.email %>>",
+  "license": "<%= props.license %>",
+  "scripts": {
+    "test": "make test"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "generator-popomore",
+  "version": "0.1.0",
+  "description": "generator for popomore",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "popomore/generator-popomore",
+  "author": {
+    "name": "popomore",
+    "email": "sakura9515@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
