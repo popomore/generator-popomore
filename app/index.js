@@ -2,12 +2,18 @@
 
 var path = require('path');
 var yeoman = require('yeoman-generator');
+var chmod = require('chmod');
 
 var SelfGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = require('../package.json');
 
     this.on('end', function () {
+      var dest = this.dest.fromBase('bin/' + (this.props.name || 'name'));
+      chmod(dest, {
+        execute: true
+      });
+
       if (!this.options['skip-install']) {
         this.installDependencies();
       }
@@ -79,7 +85,7 @@ var SelfGenerator = yeoman.generators.Base.extend({
   jsFile: function() {
     if (this.props.hasBin) {
       this.mkdir('bin');
-      this.template('bin/name', 'bin/' + this.props.name || 'name');
+      this.template('bin/name', 'bin/' + (this.props.name || 'name'));
     }
 
     this.template('index.js');

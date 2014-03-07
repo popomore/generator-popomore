@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
-    "chalk": "~0.4.0"
+    "chmod": "~0.2.1"
   },
   "devDependencies": {
     "mocha": "*"
