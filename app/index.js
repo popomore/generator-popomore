@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var chmod = require('chmod');
@@ -10,9 +11,9 @@ var SelfGenerator = yeoman.generators.Base.extend({
 
     this.on('end', function () {
       var dest = this.dest.fromBase('bin/' + (this.props.name || 'name'));
-      chmod(dest, {
-        execute: true
-      });
+      if (fs.existsSync(dest)) {
+        chmod(dest, {execute: true});
+      }
 
       if (!this.options['skip-install']) {
         this.installDependencies();
