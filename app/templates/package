@@ -7,10 +7,10 @@
     "commander": "~2.1.0"
   <% } %>},
   "devDependencies": {
-    "mocha": "~1.17.1",
-    "should": "~3.1.3",
-    "coveralls": "~2.8.0",
-    "istanbul": "~0.2.6"
+    "istanbul": "~0.2.7",
+    "coveralls": "~2.10.0",
+    "mocha": "~1.18.2",
+    "should": "~3.3.1"
   },<% if (repoUrl) { %>
   "repository": {
     "type": "git",
