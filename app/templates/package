@@ -7,10 +7,11 @@
     "commander": "~2.1.0"
   <% } %>},
   "devDependencies": {
+    "jshint": "*",
     "istanbul": "0",
     "coveralls": "2",
     "mocha": "1",
-    "should": "3"
+    "should": "4"
   },<% if (repoUrl) { %>
   "repository": {
     "type": "git",
