@@ -7,6 +7,7 @@
     "commander": "~2.1.0"
   <% } %>},
   "devDependencies": {
+    "autod": "2",
     "jshint": "*",
     "istanbul": "0",
     "coveralls": "2",
@@ -21,6 +22,7 @@
   "author": "<%= props.user %> <<%= props.email %>>",
   "license": "<%= props.license %>",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "autod": "autod -e test/fixtures -f ~ -w"
   }
 }
