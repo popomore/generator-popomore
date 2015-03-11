@@ -8,4 +8,6 @@ node_js:
   - iojs-1.0
   - iojs-1.1
 
-after_success: make coveralls
+script: npm run cov
+
+after_success: npm run coveralls
