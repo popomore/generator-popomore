@@ -94,14 +94,15 @@ var SelfGenerator = yeoman.generators.Base.extend({
 
   projectfiles: function () {
     this.copy('jshintrc', '.jshintrc');
+    this.copy('jshintignore', '.jshintignore');
     this.copy('gitignore', '.gitignore');
     this.copy('npmignore', '.npmignore');
     this.copy('editorconfig', '.editorconfig');
     this.copy('travis.yml', '.travis.yml');
+    this.copy('appveyor.yml', 'appveyor.yml');
 
     this.template('README.md');
     this.template('HISTORY.md');
-    this.template('Makefile');
     this.template('package', 'package.json');
   }
 });
