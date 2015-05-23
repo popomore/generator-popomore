@@ -8,11 +8,11 @@
   <% } %>},
   "devDependencies": {
     "autod": "2",
-    "jshint": "*",
+    "jshint": "2",
     "istanbul": "0",
     "coveralls": "2",
-    "mocha": "1",
-    "should": "4"
+    "mocha": "2",
+    "should": "6"
   },<% if (repoUrl) { %>
   "repository": {
     "type": "git",
